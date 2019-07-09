@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/av"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/efive"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="26dp"/>
+    <TextView
+        android:id="@+id/avt"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="N"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"
+        android:textAlignment="gravity"
+        android:src="@drawable/efive"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="26dp"/>
+
+    <TextView
+        android:id="@+id/avname"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/avt"
+        android:text="Nitesh Kumar"
+        android:layout_marginTop="12dp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/avdesig"
+        android:layout_below="@+id/avname"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/avt"
+        android:text="Android App Developer"
+        android:textSize="12sp"
+         />
+
+</RelativeLayout>

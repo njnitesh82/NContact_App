@@ -1,0 +1,124 @@
+<html>
+<style>
+    p{
+    background: LightGray;
+    font-family: verdana;
+    text-align: left
+    }
+    body{
+        align-content: flex-start
+    }
+    h3{
+        background: Tomato;
+        font-family: verdana;
+        text-align: left
+    }
+    
+    </style>
+    
+    <body>
+       <h1 style="background-color:DodgerBlue; font-family:verdana;text-align:center">Contact Application Using Realm</h1>
+
+    <p style="background-color:MediumSeaGreen; text-align:start; font-family:verdana">
+    In this we are going to make an contact application using realm database.
+    In this application we can add a user, get information of that user and we 
+    can serch for that user.
+    This application contain four activity that is given below.
+    <ul>
+        <li>splash</li>
+        <li>home</li>
+        <li>profile</li>
+        <li>search</li>
+    </ul>
+    </p>
+    <p >first start a new project in android studio. then copy all the asset and drawle file 
+     from my repo.Now we are good to go.
+     Create an Activity name it splash. After that go to its xml file and  
+     copy the xml code which is given below</p>
+       <script src="https://snipsave.com/embed/Lz3iTyVJWO4u1nLac3.js"></script>
+ 
+     <p>now go to the splash.java and copy the code in that file which is given below<br> !! one more important thing we have make this activity as launcher activity in manifest.</p>
+     <script src="https://snipsave.com/embed/6KZnW8Ipvu2i0mOIpX.js"></script>  
+      
+ 
+       
+             
+    <div class="RealmApp">
+       <p>now we have to setup the Realm in our app. For this we have to 
+       add some dependency in the application. which is given below.</p>
+       <script src="https://snipsave.com/embed/yECaHGrQXZT9cY0JE8.js"></script>
+       
+    <p>after the successfully syncing now we are ready go furher.create an class named "RelamApp.java" and extend with Application class. Code is given below (one important thing which we have to keep it mind that is we have to mention this application  class in menifest.)</p>
+      <script src="https://snipsave.com/embed/33jG5Kb51f5pWogGI4.js"></script>
+     <p>we will add some classes in this project named model.java(datamodel)
+        and imageUtil.java(image utility class). code is given below </p>  
+        <p>imageUtil.java</p>
+        <script src="https://snipsave.com/embed/WYPnzlJIgx12uUDdyM.js"></script>
+        <p>model.java</p>
+        <script src="https://snipsave.com/embed/StmYdXp9tdE6LhUE1c.js"></script>
+        
+        <p>now we are going to make a Recyclerview adapter for that fisrt crete a layout name ""con_card.xml. code is given below</p>
+        <script src="https://snipsave.com/embed/2OPWMFPW9p0ZmzgMsg.js"></script>
+        <p>after adding the layout crete a class name it "Rcadapter" and extend with RecyclerView.Adapter. code is given below </p>
+        <script src="https://snipsave.com/embed/NHkd8jooc0gvZzhPgr.js"></script>
+        
+        
+        
+        
+        
+        <p>create an Activity named "home". goto its's xml and copy design layout given below </p>
+        <script src="https://snipsave.com/embed/iS3VIYSZOpCntBuhny.js"></script>
+        <p>after that come on the onCrete method of home activity and add some important function which will call in future by oncrete method. copy all function below the oncrete</p>
+        <script src="https://snipsave.com/embed/s5ZDxJcoop72GPTgzV.js"></script>
+        <p>after this we have to add some override method which is given below.<br>
+        it is given below in code. copy this and paste it in the home.java below the           on create method.</p>
+        <script src="https://snipsave.com/embed/VaSC6C3ODXicZ6ITk8.js"></script>
+        
+        
+        <p>now it's time to start with on create methon of home actvity. firstly we have to check the permission is given or not if not the it should be ask for permission.(write permission in menifest also), there is some initlizaton of objects.</p>
+        <script src="https://snipsave.com/embed/EJEQb9gJZy3zTOICGO.js"></script>
+        
+        <p>hopefully, we are going good now add button on click listner and their                 functionality, when user click any of these there should be an action<br>
+            there is two button one for adding contact and other is for search a contact. write this code in the onCreate method</p>
+            <script src="https://snipsave.com/embed/38RVTfmgYlClfM250Y.js"></script>
+        <p>after this we are going to setup recycler view.write this code in the onCreate method and finally we are done with home activity.</p>
+        <script src="https://snipsave.com/embed/149RR8V2BzmvTYOCDe.js"></script>
+    </div>      
+        
+    
+    
+    
+    
+    <div class="profile">
+    <h3>now we are going to write profile Activity. for that crete an Activity named       profile. </h3>
+    
+    <p>after the activity crete goto it's xml file and design the layout</p>
+    <script src="https://snipsave.com/embed/sXXNynfqXxHu3eLb0W.js"></script>
+    <p>In this activity we are going to show user profile or contact info. in this         activity in the start we have to recieve a uid which send by recyclerView adapter.     using this uid we will fire an query and get the all information about contact.
+    <br>
+    before it we have to add some function below the on create. in future we will call     it as per need.</p>
+    <script src="https://snipsave.com/embed/iVoEAcIgm3jpTVNhkt.js"></script>
+       
+    <p>now come to the onCrete method of profile and paste the code in onCreate.</p>
+    <script src="https://snipsave.com/embed/bLaQpiPjNHF6RlejSL.js"></script>
+          
+    </div>
+    
+    <div class="search">
+     <h3>Create an Activity and named it "search". goto it's xml file design it as code     is given.</h3> 
+      <script src="https://snipsave.com/embed/sqVM24wlKWhEBq8O2g.js"></script>
+      
+      <p>now come to the oncrete method of search activity and paste code which is         given below. in this code we are doing and query for matching result and after         getting result then setuping the data with recyclerview of search activity.</p>
+      <script src="https://snipsave.com/embed/HnhlqCUi2x7yzsb3pg.js"></script>
+       
+    </div>
+    
+    <h3>now we are done with our application install it and enjoy it.</h3>
+    
+    
+    </body>
+
+
+
+
+</html>
